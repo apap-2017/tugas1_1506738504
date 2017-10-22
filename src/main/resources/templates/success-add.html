@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Tambah Penduduk</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"></link>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div th:replace="fragments/fragment :: header"></div>
+		<div class="col-lg-8">
+			<h3>Sukses!</h3>
+			<p th:text="'Penduduk dengan NIK ' + ${penduduk.nik} + ' berhasil ditambahkan'" />
+			<hr/>
+		</div>
+	</body>
+</html>

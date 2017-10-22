@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Tambah Penduduk</title>
+		<div th:replace="fragments/fragment :: links"></div>
+	</head>
+	<body>
+		<div th:replace="fragments/fragment :: header"></div>
+		<div class="col-lg-8">
+			<h5>Tambah Penduduk</h5>
+			
+			<form action="/penduduk/tambah/submit" method="post">
+				<div class="form-group">
+					<label for="nama">Masukkan Nama</label>
+						<input type="text" class="form-control" name="nama" required="true" />
+					<label for="jenis_kelamin">Jenis Kelamin</label>
+						<select class="form-control" name="jenis_kelamin">
+							<option>Laki-laki</option>
+							<option>Perempuan</option>
+						</select>
+					<label for="tempat_lahir">Tempat Lahir</label>
+						<input type="text" class="form-control" name="tempat_lahir" required="true" />
+					<label for="tanggal_lahir">Tanggal Lahir</label>
+						<input type="text" class="form-control" name="tanggal_lahir" required="true" />
+					<label for="golongan_darah">Golongan Darah</label>
+						<select class="form-control" name="golongan_darah">
+							<option>A</option>
+							<option>B</option>
+							<option>O</option>
+							<option>AB</option>
+						</select>
+					<label for="agama">Agama</label>
+						<input type="text" class="form-control" name="agama" required="true" />
+					<label for="status_perkawinan">Status Perkawinan</label>
+						<select class="form-control" name="status_perkawinan">
+							<option>Kawin</option>
+							<option>Belum Kawin</option>
+						</select>
+					<label for="pekerjaan">Pekerjaan</label>
+						<input type="text" class="form-control" name="pekerjaan" required="true" />
+					<label for="is_wni">Kewarganegaraan</label>
+						<select class="form-control" name="is_wni">
+							<option>WNI</option>
+							<option>WNA</option>
+						</select>
+					<label for="is_wafat">Status Kematian</label>
+						<select class="form-control" name="is_wafat">
+							<option>Hidup</option>
+							<option>Wafat</option>
+						</select>
+					<label for="id_keluarga">Id Keluarga</label>
+						<input type="text" class="form-control" name="id_keluarga" required="true" />
+					<label for="status_dalam_keluarga">Status dalam Keluarga</label>
+						<input type="text" class="form-control" name="status_dalam_keluarga" required="true" />
+				</div>
+				
+				<div>
+					<button type="submit" class="btn btn-primary" name="action" value="Simpan">Simpan</button>
+				</div>
+			</form>
+		</div>
+		<hr/>
+	</body>
+</html>
